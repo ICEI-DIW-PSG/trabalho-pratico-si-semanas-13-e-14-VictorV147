@@ -19,5 +19,7 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 << Coloque aqui uma breve explicação da implementação feita nessa etapa>>
 
 <<  COLOQUE A IMAGEM TELA 1 AQUI >>
-
+![](/public/grafico1.png)
 <<  COLOQUE A IMAGEM TELA 2 AQUI >>
+![](/public/novoJG.png)
+![](/public/grafico2.png)

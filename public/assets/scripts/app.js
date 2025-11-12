@@ -1,5 +1,66 @@
 const API_URL = "http://localhost:3000";
 
+async function renderizarGraficoJogadores() {
+  const canvasCtx = document.getElementById("graficoNotasJogadores");
+  if (!canvasCtx) return;
+  try {
+    const resposta = await fetch(`${API_URL}/jogadores`);
+    const jogadores = await resposta.json();
+    const nomes = jogadores.map((jogador) => jogador.nome);
+    const gols = jogadores.map((jogador) => jogador.estatisticas.gols);
+    const assistencias = jogadores.map(
+      (jogador) => jogador.estatisticas.assistencias
+    );
+    new Chart(canvasCtx, {
+      type: "bar",
+      data: {
+        labels: nomes,
+        datasets: [
+          {
+            label: "Gols",
+            data: gols,
+            backgroundColor: "rgba(0, 51, 102, 0.8)",
+            borderColor: "rgba(0, 51, 102, 1)",
+            borderWidth: 1,
+          },
+          {
+            label: "Assistências",
+            data: assistencias,
+            backgroundColor: "rgba(200, 200, 200, 0.8)",
+            borderColor: "rgba(0, 51, 102, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "top",
+          },
+          title: {
+            display: true,
+            text: "Participações em Gols (Gols + Assistências)",
+          },
+        },
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  } catch (erro) {
+    console.error("Erro ao renderizar gráfico:", erro);
+    canvasCtx.parentElement.innerHTML =
+      "<p class='text-danger'>Falha ao carregar dados para o gráfico.</p>";
+  }
+}
+
 async function renderizaCardsJogadores() {
   const containerDosCards = document.getElementById("cards-jogadores");
   if (!containerDosCards) return;
@@ -231,5 +292,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (document.getElementById("detalhe-jogador-container")) {
     renderizaDetalhesJogador();
+  }
+
+  if (document.getElementById("graficoNotasJogadores")) {
+    renderizarGraficoJogadores();
   }
 });

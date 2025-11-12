@@ -197,6 +197,21 @@
           "descricao": "Liderou as estatísticas de dribles certos no campeonato."
         }
       ]
+    },
+    {
+      "id": "5371",
+      "nome": "CR7",
+      "posicao": "Atacante",
+      "imagem_principal": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/02/cristiano-ronaldo-al-nassr-e1738614469513.jpeg?w=1200&h=900&crop=0",
+      "descricao": "Novo jogador adicionado via formulário.",
+      "destaque": false,
+      "estatisticas": {
+        "nota": 10,
+        "minutos_jogados": 0,
+        "gols": 5,
+        "assistencias": 3
+      },
+      "conquistas": []
     }
   ],
   "noticias": [
