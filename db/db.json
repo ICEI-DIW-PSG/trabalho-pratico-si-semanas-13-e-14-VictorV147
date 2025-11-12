@@ -1,18 +1,237 @@
 {
-  "usuarios": [
+  "jogadores": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": "1",
+      "nome": "Kaio Jorge",
+      "posicao": "Atacante",
+      "imagem_principal": "KJcard.jpeg",
+      "descricao": "Iniciou sua carreira profissional no Santos, depois se transferiu para a Juventus da Itália onde não conseguiu emplacar uma sequência devido a várias lesões. Voltou ao futebol brasileiro, mais especificamente ao Cruzeiro, com o desejo de recuperar o bom futebol que já apresentou no Santos e chegar à seleção brasileira.",
+      "destaque": true,
+      "estatisticas": {
+        "nota": 8.2,
+        "minutos_jogados": 2212,
+        "gols": 15,
+        "assistencias": 5
+      },
+      "conquistas": [
+        {
+          "id": 1,
+          "titulo": "Gol na Estreia",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Gol+Estreia",
+          "descricao": "Marcou um gol decisivo logo em sua primeira partida pelo clube."
+        },
+        {
+          "id": 2,
+          "titulo": "Artilheiro do Mês",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Goleador",
+          "descricao": "Foi o maior goleador da equipe durante o último mês da competição."
+        },
+        {
+          "id": 3,
+          "titulo": "Líder de Gols",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Artilheiro",
+          "descricao": "Tornou-se o jogador com mais Gols no campeonato."
+        },
+        {
+          "id": 4,
+          "titulo": "Convocado para Seleção",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Sele%C3%A7%C3%A3o",
+          "descricao": "Suas boas atuações renderam uma convocação para a seleção nacional."
+        }
+      ]
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": "2",
+      "nome": "Mateus Pereira",
+      "posicao": "Meia",
+      "imagem_principal": "MPcard.jpeg",
+      "descricao": "Meio-campista de grande visão de jogo e qualidade no passe, sendo o principal articulador da equipe e responsável por criar as principais jogadas de ataque. Apos longa passagem por clubes europeus, retornou ao Brasil para se destacar no Cruzeiro, seu time do coracao.",
+      "destaque": true,
+      "estatisticas": {
+        "nota": 8.1,
+        "minutos_jogados": 2249,
+        "gols": 4,
+        "assistencias": 8
+      },
+      "conquistas": [
+        {
+          "id": 1,
+          "titulo": "Líder de Assistências",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Assist%C3%AAncias",
+          "descricao": "Tornou-se o jogador com mais assistências no campeonato."
+        },
+        {
+          "id": 2,
+          "titulo": "Craque da Rodada",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Craque",
+          "descricao": "Eleito o melhor jogador em campo na última vitória do time."
+        },
+        {
+          "id": 3,
+          "titulo": "Maior media de notas no Sofascore",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Lider",
+          "descricao": "Maior media de notas de desempenho pelo time no campeonato."
+        },
+        {
+          "id": 4,
+          "titulo": "Craque do Campeonato 2025",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Bola+de+Ouro",
+          "descricao": "Jogador foi eleito o melhor jogador do campeonato 2025 pela sua temporada espetacular a frente do trem azul."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "nome": "Gabriel Barbosa",
+      "posicao": "Atacante",
+      "imagem_principal": "Gabicard.jpeg",
+      "descricao": "Atacante de renome com faro de gol apurado, conhecido por sua capacidade de finalização dentro da área e por ser decisivo em momentos importantes. Apos passagem de grande sucesso pelo Flamengo, veio para o Cruzeiro com a missão de liderar o ataque e ajudar o time a conquistar títulos com um dos maiores salarios do pais.",
+      "destaque": false,
+      "estatisticas": {
+        "nota": 7.3,
+        "minutos_jogados": 1647,
+        "gols": 11,
+        "assistencias": 4
+      },
+      "conquistas": [
+        {
+          "id": 1,
+          "titulo": "Maior carrasco de rivais",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Carrasco+de+Rivais",
+          "descricao": "Lider de gols em classicos no Brasil."
+        },
+        {
+          "id": 2,
+          "titulo": "Jogador que precisa de menos tempo para marcar um gol",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Gols+R%C3%A1pidos",
+          "descricao": "Jogador pelo campeonato que menos leva tempo por partida para balancar as redes."
+        },
+        {
+          "id": 3,
+          "titulo": "Maior salario do Cruzeiro",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Multimilion%C3%A1rio",
+          "descricao": "Jogador configura como um o jogador mais bem pago do futebol brasileiro."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "nome": "Christian",
+      "posicao": "Volante",
+      "imagem_principal": "Chriscard.jpeg",
+      "descricao": "Volante versátil com boa capacidade de marcação e qualidade na saída de bola, contribuindo tanto para a defesa quanto para o início das jogadas ofensivas, que apesar de grande desconfianca da torcida, vem se firmando como um dos principais jogadores do meio campo do Cruzeiro.",
+      "destaque": false,
+      "estatisticas": {
+        "nota": 7.4,
+        "minutos_jogados": 1950,
+        "gols": 3,
+        "assistencias": 3
+      },
+      "conquistas": [
+        {
+          "id": 1,
+          "titulo": "Maior Ladrão de Bolas",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Desarme",
+          "descricao": "Foi o líder em desarmes da equipe na temporada."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "nome": "Fabrício Bruno",
+      "posicao": "Zagueiro",
+      "imagem_principal": "FBcard.jpeg",
+      "descricao": "Defensor de boa imposição física e velocidade, conhecido pela segurança nos desarmes e pela regularidade em suas atuações no sistema defensivo. Depois de grande passagem pelo Flamengo, retornou ao Cruzeiro, clube que o revelou, para ser o líder da zaga e ajudar o time a conquistar títulos importantes.",
+      "destaque": true,
+      "estatisticas": {
+        "nota": 7.1,
+        "minutos_jogados": 2500,
+        "gols": 1,
+        "assistencias": 1
+      },
+      "conquistas": [
+        {
+          "id": 1,
+          "titulo": "Convocado para Seleção",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Sele%C3%A7%C3%A3o",
+          "descricao": "Suas boas atuações renderam uma convocação para a seleção nacional."
+        },
+        {
+          "id": 2,
+          "titulo": "Zagueiro Artilheiro",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Zagueiro+Matador",
+          "descricao": "O zagueiro goleador do cruzeiro segue como um dos zagueiros com mais participacoes el gols no campeonato."
+        },
+        {
+          "id": 3,
+          "titulo": "Melhor zagueiro do campeonato",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=The+Best",
+          "descricao": "Zagueiro eleito para a selecao do campeonato temporada 2025."
+        },
+        {
+          "id": 4,
+          "titulo": "Zagueiro mais rapido do campeonato",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Veloz+e+Furioso",
+          "descricao": "Zagueiro foi considerado o mais rapido em sua posicao se destacando amplamente por sua reposicao."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "nome": "Wanderson",
+      "posicao": "Ponta",
+      "imagem_principal": "Wandcard.jpeg",
+      "descricao": "Atacante de beirada que explora a velocidade e o drible para quebrar as linhas de defesa adversárias, buscando jogadas individuais e cruzamentos para a área. Apos breve passagem pelo internacional, chegou ao Cruzeiro para ser uma peça importante no ataque, trazendo dinamismo e criatividade pelas pontas.",
+      "destaque": false,
+      "estatisticas": {
+        "nota": 7,
+        "minutos_jogados": 1890,
+        "gols": 6,
+        "assistencias": 7
+      },
+      "conquistas": [
+        {
+          "id": 1,
+          "titulo": "Destaque em Dribles",
+          "imagem": "https://placehold.co/300x200/4D4DFF/000000?text=Drible",
+          "descricao": "Liderou as estatísticas de dribles certos no campeonato."
+        }
+      ]
+    }
+  ],
+  "noticias": [
+    {
+      "id": "1",
+      "titulo": "Nova Contratacao Chega na Toca da Raposa",
+      "descricao": "Novo reforco chega para reforcar o Cruzeiro para o restante da temporada 2025",
+      "conteudo": "Cruzeiro fecha contratacao de novo reforco colombiano, Sinisterra chega ao cruziero vindo do bourmenouth da inglaterra por 7 milhoes de euros. O ponta vem de recente lesao no joelho.",
+      "categoria": "Mercado da bola",
+      "autor": "Victor Viriato",
+      "data": "2025-03-10",
+      "imagem": "Sinisterra.jpeg",
+      "fonte": "https://www.centraldatoca.com.br/mercado/2025/08/22/sinisterra-no-cruzeiro-veja-valores-prazos-e-bastidores-exclusivos-da-negociacao"
+    },
+    {
+      "id": "2",
+      "titulo": "Provavel escalacao",
+      "descricao": "Provavel escalacao do Cruzeiro para confronto das quartas de finais da copa do brasil",
+      "conteudo": "Pre escalacao do cruzeiro para enfrentar o rival no confronto pelas quartas de finais da copa do cruzeiro na proxima quarta feira. Cruzeiro vem de uma vanatagem solida contruida no primeiro jogo que terminou em 2X0 para o maior de minas",
+      "categoria": "Escalacao",
+      "autor": "Victor Viriato",
+      "data": "2025-03-10",
+      "imagem": "campinho.jpeg",
+      "fonte": "https://www.centraldatoca.com.br/campeonatos/copa-do-brasil/2025/08/26/atletico-mg-x-cruzeiro-pela-copa-do-brasil-quem-pode-jogar-e-desfalques"
+    },
+    {
+      "id": "3",
+      "titulo": "Zagueiro Convocado",
+      "descricao": "Zagueiro titular do maior de minas é convocado pra selecao brasileira",
+      "conteudo": "Fabricio Bruno aparece na lista de convocados de Lanceloti para respresentar a selecao nos proximos jogos da eliminatoria para a copa do mundo",
+      "categoria": "Convocados",
+      "autor": "Victor Viriato",
+      "data": "2025-03-10",
+      "imagem": "FBselecao.jpeg",
+      "fonte": "https://www.centraldatoca.com.br/entrevistas/2025/08/26/do-cochilo-a-selecao-fabricio-bruno-conta-bastidor-da-convocacao-e-agradece-ao-cruzeiro/"
     }
   ]
 }

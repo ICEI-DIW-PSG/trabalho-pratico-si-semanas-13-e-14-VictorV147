@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trem Azul</title>
+    <link rel="stylesheet" href="/public/assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="/public/assets/scripts/app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="bg-primary text-white p-3 shadow-sm">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-2 d-none d-md-block">
+            <img
+              src="escudo.jpeg"
+              class="img-fluid rounded"
+              alt="Cruzeiro escudo"
+              style="max-height: 70px"
+            />
+          </div>
+
+          <div class="col-12 col-md-8 text-center">
+            <h1 class="m-0 titulo-header">🚂 Trem Azul 🦊</h1>
+          </div>
+
+          <div class="col-md-2 d-none d-md-block text-end">
+            <img
+              src="escudo.jpeg"
+              class="img-fluid rounded"
+              alt="Cruzeiro escudo"
+              style="max-height: 70px"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="container-fluid">
+      <ul class="nav navbar-expand-md nav-pills nav-fill m-4">
+        <li class="nav-item px-1">
+          <a class="nav-link active" aria-current="page" href="/">Equipe</a>
+        </li>
+        <li class="nav-item px-1">
+          <a class="nav-link active" aria-current="page" href="/">Noticias</a>
+        </li>
+        <li class="nav-item px-1">
+          <a class="nav-link active" aria-current="page" href="/"
+            >Estatisticas</a
+          >
+        </li>
+        <li class="nav-item px-1">
+          <a class="nav-link active" aria-current="page" href="/">Jogos</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container-fluid">
+      <div class="row p-3 m-3 align-items-start">
+        <aside class="col-12 col-md-3 bg-primary text-center">
+          <h1 class="m-3">Últimas Notícias</h1>
+          <div id="noticias"></div>
+        </aside>
+
+        <section class="col-12 col-md-5 text-center mx-auto mt-4 mt-md-0">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner" id="carousel-container"></div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <section class="mt-5">
+            <h2 class="p-3">Elenco Principal</h2>
+            <div
+              id="cards-jogadores"
+              class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+            ></div>
+          </section>
+
+          <div class="mt-5">
+            <form
+              class="opiniao mx-auto p-4 border rounded shadow"
+              action="demo_form.html"
+              method="POST"
+              style="max-width: 100%"
+            >
+              <h2 class="mb-4 text-center">
+                De sua opiniao sobre o atual momento da equipe
+              </h2>
+
+              <div class="mb-3">
+                <label for="texto" class="form-label">Sua opiniao</label>
+                <textarea
+                  class="form-control"
+                  id="texto"
+                  name="texto"
+                  rows="6"
+                  placeholder="Preencha com algum texto..."
+                ></textarea>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">
+                  Enviar Opiniao
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <aside class="col-12 col-md-3 text-center my-3 px-4 pb-3">
+          <div class="bg-primary p-2">
+            <h1 class="">Brasileirao</h1>
+            <div class="card p-3">
+              <img src="tabela.jpeg" class="card-img-top" alt="..." />
+            </div>
+          </div>
+
+          <form id="form-novo-jogador" class="mt-5 mx-auto p-4 border rounded shadow bg-light">
+            <h3 class="mb-3 text-primary">Adicionar Novo Jogador</h3>
+            <div class="mb-3">
+              <label for="form-nome" class="form-label">Nome:</label>
+              <input type="text" class="form-control" id="form-nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="form-posicao" class="form-label">Posição:</label>
+              <input type="text" class="form-control" id="form-posicao" required>
+            </div>
+            <div class="mb-3">
+              <label for="form-imagem" class="form-label">URL da Imagem:</label>
+              <input type="text" class="form-control" id="form-imagem" placeholder="https://...">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Adicionar Jogador</button>
+          </form>
+          <form class="inscricao mt-5 mx-auto p-4 border rounded shadow">
+          
+          <form class="inscricao mt-5 mx-auto p-4 border rounded shadow">
+            <h2 class="mb-4">Se inscreva para sempre ficar atualizado</h2>
+
+            <fieldset class="mb-4">
+              <legend class="fs-5">Informacoes Pessoais:</legend>
+
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="dt" class="form-label">Data de nascimento:</label>
+                <input type="date" class="form-control" id="dt" name="dt" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label d-block">Sexo:</label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sex"
+                    id="sexoM"
+                    value="male"
+                  />
+                  <label class="form-check-label" for="sexoM">Masculino</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sex"
+                    id="sexoF"
+                    value="female"
+                  />
+                  <label class="form-check-label" for="sexoF">Feminino</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+              <legend class="fs-5">Quero:</legend>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="semanal"
+                  name="acao"
+                  value="vel"
+                />
+                <label class="form-check-label" for="semanal">
+                  Receber atualizações semanalmente
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="diario"
+                  name="acao"
+                  value="ga"
+                />
+                <label class="form-check-label" for="diario">
+                  Receber atualizações diariamente
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </aside>
+      </div>
+
+      <footer class="bg-light text-dark pt-4 mt-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-4 mb-3">
+              <h5>Sobre</h5>
+              <p>
+                Um blog sobre o cruzeiro. De um cruzeirense para outros
+                cruzeirenses.
+              </p>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <h5>Links úteis</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-dark text-decoration-none">Início</a>
+                </li>
+                <li>
+                  <a href="#" class="text-dark text-decoration-none"
+                    >Projetos</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-dark text-decoration-none">Contato</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+              <h5>Contato</h5>
+              <p>Email: victor.carmo.1478516@sga.pucminas.br.com</p>
+              <p>Tel: (31) 99999-9999</p>
+            </div>
+          </div>
+          <div class="text-center py-3 border-top">
+            <p class="mb-0">© 2025 Trem Azul - Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes da Notícia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container py-5">
+    <div id="detalhe"></div>
+
+    <script src="/public/assets/scripts/app.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get("id"));
+
+      const noticia = noticias.find((n) => n.id === id);
+
+      if (noticia) {
+        document.getElementById("detalhe").innerHTML = `
+        <div class="card mx-auto" style="max-width: 800px;">
+          <img src="${noticia.imagem}" class="card-img-top" alt="${noticia.titulo}">
+          <div class="card-body">
+            <h1>${noticia.titulo}</h1>
+            <p><strong>Categoria:</strong> ${noticia.categoria}</p>
+            <p><strong>Autor:</strong> ${noticia.autor}</p>
+            <p><strong>Data:</strong> ${noticia.data}</p>
+            <p>${noticia.conteudo}</p>
+            <a href="${noticia.fonte}" class="btn btn-primary" target="_blank">Ler na fonte original</a>
+          </div>
+        </div>
+      `;
+      } else {
+        document.getElementById("detalhe").innerHTML =
+          "<p>Notícia não encontrada.</p>";
+      }
+    </script>
+  </body>
+</html>
